@@ -1,7 +1,7 @@
 FROM golang:alpine
 
 # Install yq for YAML and JSON parsing
-RUN apk add -U curl git && \
+RUN apk add -U curl git jq && \
     wget -q -O /usr/bin/yq https://github.com/mikefarah/yq/releases/download/3.4.1/yq_linux_amd64 && \
     chmod +x /usr/bin/yq
 
